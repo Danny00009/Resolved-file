@@ -15,7 +15,7 @@ class OtpPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back),
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 196, 245, 247),
+      backgroundColor: Colors.lightGreen,
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
