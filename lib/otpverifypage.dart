@@ -13,11 +13,13 @@ class OtpPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(
+            Icons.arrow_back_sharp,
+          ),
         ),
       ),
       backgroundColor: Colors.green[50],
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,17 +40,23 @@ class OtpPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4,
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                 left: 20,
                 right: 20,
               ),
-              child: const Text('code has been send to +91 90901*****'),
+              child: Text(
+                'Code has been send to +91 90901*****',
+                style: TextStyle(
+                  fontSize: 16,
+                  // fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -62,10 +70,12 @@ class OtpPage extends StatelessWidget {
                   PinCodeTextField(
                     appContext: context,
                     length: 4,
+                    keyboardType: TextInputType.number,
+                    enablePinAutofill: true,
                     pinTheme: PinTheme(
                       shape: PinCodeFieldShape.box,
-                      borderRadius: BorderRadius.circular(8),
-                      fieldWidth: 70,
+                      borderRadius: BorderRadius.circular(9),
+                      fieldWidth: 80,
                       selectedFillColor: Colors.white,
                       selectedColor: Colors.white,
                       activeFillColor: Colors.white,
@@ -73,11 +83,39 @@ class OtpPage extends StatelessWidget {
                       inactiveFillColor: Colors.white,
                       activeColor: Colors.white,
                       borderWidth: 1,
-                      selectedBorderWidth: 4,
+                      selectedBorderWidth: 2,
+                      // fieldOuterPadding: EdgeInsets.all(7),
                     ),
+                    onChanged: (value) {},
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              child: RichText(
+                  text: TextSpan(
+                      text: ('Resend code in'),
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ),
+                      ),
+                      children: [
+                    TextSpan(
+                      text: (' 45'),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 145, 222, 147),
+                      ),
+                    ),
+                    TextSpan(
+                      text: (' s'),
+                    ),
+                  ])),
             )
           ],
         ),
