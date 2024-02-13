@@ -116,7 +116,7 @@ class OtpPage extends StatelessWidget {
                       text: (' s'),
                     ),
                   ])),
-            )
+            ),
           ],
         ),
       ),
