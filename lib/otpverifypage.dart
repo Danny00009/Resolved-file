@@ -116,7 +116,30 @@ class OtpPage extends StatelessWidget {
                       text: (' s'),
                     ),
                   ])),
-            )
+            ),
+            Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 25, top: 80, left: 25, right: 25),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 400,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 53, 219, 142),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: const Center(
+                        child: Text(
+                          'Verify',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
           ],
         ),
       ),
