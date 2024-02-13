@@ -35,6 +35,7 @@ class OtpPage extends StatelessWidget {
                   ),
                 ),
               ),
+              Text('code as been sent to +91 90901*****'),
             ],
           ),
         ),
